@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+:root {
+  --primary-text-colo: rgba (0, 0, 0, 0.8);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.7;
+  font-size: 14px;
+  color: #212121;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.section-title {
+}
+
+.container {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.site-nav-list {
+  display: flex;
+  margin-left: 93px;
+}
+.site-nav-list li a:hover,
+.contacts li a:hover {
+  color: #2196f3;
+}
+.site-nav-list li a:active,
+.contacts li a:active {
+  color: #2196f3;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: #2f303a;
+}
+
+.hero h1 {
+  max-width: 696px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.hero button {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+  padding: 10px 32px;
+  background-color: #2196f3;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.site-nav-list li:not(:last-child) {
+  margin-right: 50px;
+}
+.contacts {
+  display: flex;
+  margin-left: 331px;
+}
+.contacts li:not(:last-child) {
+  margin-right: 50px;
+}
+
+.benefits {
+  width: 100%;
+
+  margin: 0 auto;
+}
+.benefits-list {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  /* почему тут не работает маржин лефт райт авто?потому что у .benefits маржин 0 auto? */
+  margin-right: auto;
+  padding-top: 94px;
+}
+.benefits-list li {
+  max-width: 270px;
+}
+.benefits li:not(:first-child) {
+  margin-left: 30px;
+}
+.benefits-list h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1721;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.benefits-list p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7142;
+  letter-spacing: 0.03em;
+  padding-top: 10px;
+  color: #757575;
+}
+
+.benefits h2 {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1719;
+  padding-top: 94px;
+  /* ???? правильно ли сделал что дал паддинг топ? */
+}
+
+.specializations-images {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  padding-top: 50px;
+  /* margin: 0 auto; это не работает (не ставит картинки по центру,видимо потому что width 100% и ему не откуда отталкиваться */
+}
+
+.specializations-images .img {
+  width: 370px;
+  height: 294px;
+}
+
+.specializations-images .img:not(:first-child) {
+  margin-left: 30px;
+}
+
+.team-container {
+  margin-top: 94px;
+  background-color: #f5f4fa;
+}
+
+.team-container h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  padding-top: 94px;
+}
+
+.command-section {
+  width: 73.125%;
+  padding-top: 50px;
+  padding-bottom: 94px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.command-card:not(:first-child) {
+  width: calc(100%-90) / 3;
+  margin-left: 30px;
+}
+
+/* .command-section .command-card {
+  width: 25%;
+  height: 368px;
+  box-sizing: border-box;
+} */
+
+/* .command-foto {
+  width: ;
+  height: auto;
+} */
+.command-card h5 {
+  padding-top: 30px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1, 1875;
+}
+
+.command-card h6 {
+  padding-top: 10px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1, 1875;
+}
+
+/* Футер */
+
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #2f303a;
+}
+
+/* .logo-bottom {
+  display: ;
+  width: 9, 0625%;
+  height: 1, 9375%;
+  padding-left: 13, 4375%;
+  padding-top: 3.75%; не сработало
+} */
+.footer-container .logo-bottom {
+  display: block;
+  width: 231px;
+  height: auto;
+}
+.footer-container {
+  padding-top: 60px;
+  padding-left: 215px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.adress {
+  padding-top: 20px;
+}
+
+.e-mail {
+  padding-top: 9px;
+}
+
+.number {
+  padding-top: 9px;
+  padding-bottom: 60px;
+}
+
+/* страница "Портфолио" */
+.main-container {
+  height: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.portfolio-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-nav-list .button-nav {
+  padding: 6px 22px;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 26px;
+  border: none;
+  border-radius: 4px;
+}
+
+.portfolio-nav-list .button-nav:hover {
+  color: #ffffff;
+  background-color: #2196f3;
+}
+
+.portfolio-nav-list:not(:first-child) {
+  margin-left: 8px;
+}
+
+.portfolio-elements-container {
+  display: flex;
+  width: 1170px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-element {
+  width: calc(100%-60px) / 3;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.portfolio-element:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.portfolio-element:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+
+.elements-name {
+  font-style: Bold;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.elements-desc {
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 1.875;
+  color: #757575;
+}
