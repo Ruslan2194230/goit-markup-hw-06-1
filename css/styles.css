@@ -44,9 +44,6 @@ img {
   height: auto;
 }
 
-.section-title {
-}
-
 .container {
   height: 80px;
   display: flex;
@@ -66,19 +63,37 @@ img {
   color: #2196f3;
 }
 
+.icon-mail-image {
+  fill: #757575;
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+.icon-mail-image:hover,
+.icon-mobile-image :hover {
+  fill: #2196f3;
+}
+
+.icon-mobile-image {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: auto;
+  height: 600;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: url(../images/icons.svg/hero-background.svg);
   background-color: #2f303a;
 }
 
-.hero h1 {
+.hero .hero-title {
   max-width: 696px;
   font-style: normal;
   font-weight: 900;
@@ -90,9 +105,10 @@ img {
 
   color: #ffffff;
 }
-.hero button {
-  font-family: "Roboto";
-  font-style: normal;
+button {
+  border: 0;
+}
+.hero .button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -129,13 +145,33 @@ img {
   margin-right: auto;
   padding-top: 94px;
 }
-.benefits-list li {
+.benefits-list .list-item {
   max-width: 270px;
 }
-.benefits li:not(:first-child) {
+.benefits .list-item:not(:first-child) {
   margin-left: 30px;
 }
-.benefits-list h3 {
+
+.list-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  margin-bottom: 30px;
+  background-size: contain;
+}
+.icon-antenna::before {
+  background-image: url(../images/icons.svg/Antenna.svg);
+}
+.icon-cloks::before {
+  background-image: url(../images/icons.svg/Cloks.svg);
+}
+.icon-diagram::before {
+  background-image: url(../images/icons.svg/Diagram.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/icons.svg/Astronaut.svg);
+}
+.benefits-list .title {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -144,7 +180,7 @@ img {
   text-transform: uppercase;
 }
 
-.benefits-list p {
+.benefits-list .text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7142;
@@ -153,7 +189,7 @@ img {
   color: #757575;
 }
 
-.benefits h2 {
+.benefits .title-specializations {
   width: 100%;
   height: auto;
   text-align: center;
@@ -185,6 +221,7 @@ img {
 .team-container {
   margin-top: 94px;
   background-color: #f5f4fa;
+  padding-bottom: 94px;
 }
 
 .team-container h2 {
@@ -197,11 +234,19 @@ img {
 
 .command-section {
   width: 73.125%;
+  height: auto;
   padding-top: 50px;
-  padding-bottom: 94px;
+  /* padding-bottom: 94px; */
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  /* background-color: #ffffff; */
+}
+.command-card {
+  background-color: #ffffff;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .command-card:not(:first-child) {
@@ -209,16 +254,6 @@ img {
   margin-left: 30px;
 }
 
-/* .command-section .command-card {
-  width: 25%;
-  height: 368px;
-  box-sizing: border-box;
-} */
-
-/* .command-foto {
-  width: ;
-  height: auto;
-} */
 .command-card h5 {
   padding-top: 30px;
   text-align: center;
@@ -230,13 +265,81 @@ img {
 
 .command-card h6 {
   padding-top: 10px;
+  margin-bottom: 15px;
   text-align: center;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1, 1875;
 }
+.social-links {
+  display: flex;
+  width: 206px;
+  height: 44px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 19px;
+  justify-content: space-between;
+  text-align: center;
+  /* object-position: 50% 50%; */
+}
+.social-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 
+  fill: #afb1b8;
+  background-color: afb1b8;
+  /* object-position: 50% 50%; */
+}
+.social-item:hover {
+  background-color: #2196f3;
+  fill: #ffffff;
+}
+.social-icon {
+  width: 20px;
+  height: 20px;
+  /* object-position: 50% 50%; */
+
+  /* fill: #afb1b8; */
+}
+/* .social-icon:hover {
+  fill: #ffffff;
+} */
+.clients {
+  padding: 94px;
+  padding-left: auto;
+  padding-right: auto;
+}
+.clients-text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  display: flex;
+  text-align: center;
+
+  justify-content: space-between;
+  width: 1170px;
+  height: 92px;
+  margin-left: auto;
+  margin-right: auto;
+}
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.clients-item {
+  width: 170px;
+  height: 92px;
+  fill: #afb1b8;
+  border-color: #afb1b8;
+}
+.clients-item:hover {
+  fill: #2196f3;
+}
 /* Футер */
 
 .footer {
@@ -245,13 +348,6 @@ img {
   background-color: #2f303a;
 }
 
-/* .logo-bottom {
-  display: ;
-  width: 9, 0625%;
-  height: 1, 9375%;
-  padding-left: 13, 4375%;
-  padding-top: 3.75%; не сработало
-} */
 .footer-container .logo-bottom {
   display: block;
   width: 231px;
@@ -259,6 +355,7 @@ img {
 }
 .footer-container {
   padding-top: 60px;
+  padding-bottom: 60px;
   padding-left: 215px;
   font-style: normal;
   font-size: 14px;
@@ -272,15 +369,23 @@ img {
 }
 
 .e-mail {
+  display: block;
   padding-top: 9px;
 }
 
 .number {
   padding-top: 9px;
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
 }
 
 /* страница "Портфолио" */
+.icon-mail-image {
+  fill: #afb1b8;
+}
+.contacts-mail ::before {
+  /*??? тоже не работает background-image: url(../images/icons.svg/svg-sprite/prosto-svg-katinki/mail-image.svg); */
+  /*????? не работает background-image: url(../images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-mail-image); */
+}
 .main-container {
   height: auto;
   padding-left: 15px;
