@@ -22,13 +22,13 @@
         </a>
         <ul class="site-nav-list">
           <li>
-            <a href="">Студия</a>
+            <a href="./index.html">Студия</a>
           </li>
           <li>
             <a href="./portfolio.html">Портфолио</a>
           </li>
           <li>
-            <a href="">Контакты</a>
+            <a href="./kontacts.html">Контакты</a>
           </li>
         </ul>
         <ul class="contacts">
@@ -38,7 +38,7 @@
                 href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-mail-image"
               ></use>
             </svg>
-            <a href="">info@devstudio.com</a>
+            <a class="e-mail" href="info@example.com"> info@example.com </a>
           </li>
           <li class="contacts-item">
             <svg class="icon-mobile-image">
@@ -46,15 +46,26 @@
                 href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-mobile-image"
               ></use>
             </svg>
-            <a href="tel:+380961111111">+38 096 111 11 11</a>
+            <a class="number" href="tel:+380961111111">+38 096 111 11 11</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <section class="hero">
+      <div class="hero-background"></div>
       <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-      <button class="button">Заказать услугу</button>
+      <button class="button" data-modal-open>Заказать услугу</button>
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <div class="modal-content">
+            <p class="privet">Привет Леша!</p>
+            <button id="button" data-modal-close>
+              Закрыть это хулиганство=)
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="benefits">
       <ul class="benefits-list">
@@ -104,32 +115,40 @@
           <h6>Product Designer</h6>
           <div class="social-links">
             <button class="social-item">
-              <svg class="social-icon">
+              <a href="" class="social-item">
+                <svg class="social-icon">
                 <use
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-instagram"
                 ></use>
               </svg>
+              </a>
             </button>
             <button class="social-item">
-              <svg class="social-icon">
-                <use
-                  href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-twitter"
-                ></use>
-              </svg>
+              <a href="">
+                <svg class="social-icon">
+                  <use
+                    href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-twitter"
+                  ></use>
+                </a>
+              </svg>  
             </button>
             <button class="social-item">
-              <svg class="social-icon">
+         <a href="https://www.facebook.com/igor.demyanenko.12">     
+          <svg class="social-icon">
                 <use
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-facebook"
                 ></use>
               </svg>
+            </a>
             </button>
             <button class="social-item">
-              <svg class="social-icon">
+              <a href="">
+                <svg class="social-icon">
                 <use
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-linkedin"
                 ></use>
               </svg>
+              </a>
             </button>
           </div>
         </li>
@@ -139,32 +158,36 @@
           <h6>Frontend Developer</h6>
           <div class="social-links">
             <button class="social-item">
-              <svg class="social-icon">
+              <a href="">
+                <svg class="social-icon">
                 <use
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-instagram"
                 ></use>
-              </svg>
+              </svg></a>
             </button>
             <button class="social-item">
-              <svg class="social-icon">
+              <a href="">
+                <svg class="social-icon">
                 <use
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-twitter"
                 ></use>
-              </svg>
+              </svg></a>
             </button>
             <button class="social-item">
-              <svg class="social-icon">
+              <a href="">
+                <svg class="social-icon">
                 <use
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-facebook"
                 ></use>
-              </svg>
+              </svg></a>
             </button>
             <button class="social-item">
-              <svg class="social-icon">
+              <a href="">
+                <svg class="social-icon">
                 <use
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-linkedin"
                 ></use>
-              </svg>
+              </svg></a>
             </button>
           </div>
         </li>
@@ -174,32 +197,37 @@
           <h6>Marketing</h6>
           <div class="social-links">
             <button class="social-item">
-              <svg class="social-icon">
+              <a href="">
+                <svg class="social-icon">
                 <use
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-instagram"
                 ></use>
-              </svg>
+              </svg></a>
             </button>
             <button class="social-item">
-              <svg class="social-icon">
+              <a href="">
+                <svg class="social-icon">
                 <use
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-twitter"
                 ></use>
-              </svg>
+              </svg></a>
             </button>
             <button class="social-item">
-              <svg class="social-icon">
+              <a href="">
+                <svg class="social-icon">
                 <use
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-facebook"
                 ></use>
               </svg>
+              </a>
             </button>
             <button class="social-item">
-              <svg class="social-icon">
+              <a href="">
+                <svg class="social-icon">
                 <use
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-linkedin"
                 ></use>
-              </svg>
+              </svg></a>
             </button>
           </div>
         </li>
@@ -209,32 +237,41 @@
           <h6>UI Designer</h6>
           <div class="social-links">
             <button class="social-item">
-              <svg class="social-icon">
+              <a href="">
+                <svg class="social-icon">
                 <use
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-instagram"
                 ></use>
               </svg>
+              </a>
             </button>
             <button class="social-item">
-              <svg class="social-icon">
+              <a href="">
+                <svg class="social-icon">
                 <use
+                  class="use-icon"
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-twitter"
                 ></use>
               </svg>
+              </a>
             </button>
             <button class="social-item">
-              <svg class="social-icon">
+              <a href="">
+                <svg class="social-icon">
                 <use
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-facebook"
                 ></use>
               </svg>
+              </a>
             </button>
             <button class="social-item">
-              <svg class="social-icon">
+              <a href="">
+                <svg class="social-icon">
                 <use
                   href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-linkedin"
                 ></use>
               </svg>
+              </a>
             </button>
           </div>
         </li>
@@ -293,9 +330,13 @@
           <img src="./images/logo-bottom.svg" />
         </a>
         <p class="adress">г. Киев, пр-т Леси Украинки, 26</p>
-        <p class="e-mail">info@example.com</p>
-        <p class="number">+38 099 111 11 11</p>
+
+        <ul class="footer-contacts">
+          <a class="e-mail" href="info@example.com"> info@example.com </a>
+          <a class="number" href="tel:+380961111111">+38 099 111 11 11</a>
+        </ul>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

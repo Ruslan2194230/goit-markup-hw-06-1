@@ -14,6 +14,10 @@ body {
   font-size: 14px;
   color: #212121;
 }
+svg {
+  width: 100%;
+  height: 100%;
+}
 
 a {
   text-decoration: none;
@@ -21,6 +25,7 @@ a {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.02em;
+  color: rgba(33, 33, 33, 1);
 }
 
 ul {
@@ -62,7 +67,27 @@ img {
 .contacts li a:active {
   color: #2196f3;
 }
+.site-nav-list li {
+  position: relative;
+}
+.site-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
 
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #2196f3;
+
+  transform: scaleX(0);
+  transition: 250ms;
+}
+
+.site-nav-link:hover:after {
+  transform: scaleX(1);
+}
 .icon-mail-image {
   fill: #757575;
   width: 16px;
@@ -91,6 +116,15 @@ img {
   padding-bottom: 200px;
   background-image: url(../images/icons.svg/hero-background.svg);
   background-color: #2f303a;
+
+  position: relative;
+}
+.hero-background {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-image: rgba(47, 48, 58, 0.4);
+  background-repeat: no-repeat;
 }
 
 .hero .hero-title {
@@ -105,9 +139,11 @@ img {
 
   color: #ffffff;
 }
+
 button {
   border: 0;
 }
+
 .hero .button {
   font-weight: 700;
   font-size: 16px;
@@ -120,14 +156,94 @@ button {
   cursor: pointer;
   border-radius: 4px;
 }
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(117, 117, 117, 0.9);
+  /* background-image: url(..//images/alexey-is-sitting.jpg);
+  background-size: contain;
+  opacity: 1; */
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 400px;
+  min-width: 400px;
+  padding: 15px;
+  text-align: center;
+  /* display: table-column;
+  vertical-align: bottom; */
+  /* display: flex;
+  align-self: flex-end;
+  flex-direction: column; почему???дети МОДАЛ не унаследуют его характеристики кроме ТЕСТ ЕЛАЙН */
+
+  background-image: url(..//images/alexey-is-sitting.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* .modal-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  vertical-align: bottom;
+} */
+.privet {
+  /* color: rgb(32, 75, 156); */
+  /* background-color: #2aa5a0;
+  background-image: linear-gradient(90deg, #e3535d, #2aa5a0);
+  -webkit-background-clip: text;
+  font-size: 50px;
+  line-height: 1; */
+
+  font-size: 40px;
+  line-height: 1;
+  background-color: #322aa5;
+  background-image: linear-gradient(90deg, #e3535d, #2a36a5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .site-nav-list li:not(:last-child) {
   margin-right: 50px;
 }
+
+#button {
+  -webkit-animation: button 1s linear infinite;
+  animation: button 1s linear infinite;
+}
+@-webkit-keyframes button {
+  100% {
+    color: rgba(34, 34, 34, 0);
+  }
+}
+@keyframes button {
+  100% {
+    color: rgba(34, 34, 34, 0);
+  }
+}
+#button {
+  background-color: #e3535d;
+  font-size: 15px;
+  border: 3px solid #c6d619;
+}
+
 .contacts {
   display: flex;
   margin-left: 331px;
+  color: rgba(117, 117, 117, 1);
 }
+
 .contacts li:not(:last-child) {
   margin-right: 50px;
 }
@@ -289,23 +405,24 @@ button {
   border-radius: 50%;
 
   fill: #afb1b8;
-  background-color: afb1b8;
+  /* background-color: afb1b8; */
   /* object-position: 50% 50%; */
 }
 .social-item:hover {
   background-color: #2196f3;
   fill: #ffffff;
 }
+.social-item:hover .social-icon {
+  fill: #ffffff;
+}
 .social-icon {
   width: 20px;
   height: 20px;
-  /* object-position: 50% 50%; */
+  fill: #afb1b8;
 
-  /* fill: #afb1b8; */
+  object-position: 50% 50%;
 }
-/* .social-icon:hover {
-  fill: #ffffff;
-} */
+
 .clients {
   padding: 94px;
   padding-left: auto;
@@ -325,10 +442,6 @@ button {
   height: 92px;
   margin-left: auto;
   margin-right: auto;
-}
-svg {
-  width: 100%;
-  height: 100%;
 }
 
 .clients-item {
@@ -354,6 +467,7 @@ svg {
   height: auto;
 }
 .footer-container {
+  display: block;
   padding-top: 60px;
   padding-bottom: 60px;
   padding-left: 215px;
@@ -368,24 +482,24 @@ svg {
   padding-top: 20px;
 }
 
-.e-mail {
+.footer-contacts a {
   display: block;
+}
+.e-mail {
   padding-top: 9px;
+  color: rgba(117, 117, 117, 1);
 }
 
 .number {
   padding-top: 9px;
-  /* padding-bottom: 60px; */
+  color: rgba(117, 117, 117, 1);
 }
 
 /* страница "Портфолио" */
 .icon-mail-image {
   fill: #afb1b8;
 }
-.contacts-mail ::before {
-  /*??? тоже не работает background-image: url(../images/icons.svg/svg-sprite/prosto-svg-katinki/mail-image.svg); */
-  /*????? не работает background-image: url(../images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-mail-image); */
-}
+
 .main-container {
   height: auto;
   padding-left: 15px;
@@ -457,4 +571,31 @@ svg {
   font-size: 16px;
   line-height: 1.875;
   color: #757575;
+}
+/* ПОЧЕМУ ССЫЛКУ В КАРТОЧКЕ ВЗЛИ ЧЕРНЫЙ ЦВЕТ!?
+я же им дал тескт декорейшн 0 */
+
+.portfolio-element-image {
+  position: relative;
+  overflow: hidden;
+}
+.background-image {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  /* padding: 63px 24px; */
+
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-element-image:hover .background-image {
+  transform: translateY(0);
 }
