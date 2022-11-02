@@ -22,13 +22,13 @@
         </a>
         <ul class="site-nav-list">
           <li>
-            <a href="./index.html">Студия</a>
+            <a href="./index.html" class="site-nav-link">Студия</a>
           </li>
           <li>
-            <a href="./portfolio.html">Портфолио</a>
+            <a href="./portfolio.html" class="site-nav-link">Портфолио</a>
           </li>
           <li>
-            <a href="./kontacts.html">Контакты</a>
+            <a href="./kontacts.html" class="site-nav-link">Контакты</a>
           </li>
         </ul>
         <ul class="contacts">
@@ -56,16 +56,65 @@
       <div class="hero-background"></div>
       <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
       <button class="button" data-modal-open>Заказать услугу</button>
-      <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <div class="modal-content">
-            <p class="privet">Привет Леша!</p>
-            <button id="button" data-modal-close>
-              Закрыть это хулиганство=)
-            </button>
-          </div>
+      <form class="form is-hidden" autocomplete="off" data-modal>
+        <!-- ??????????????????????????????????????????????????????????????????????????????????????????????? -->
+       <button class="cross-div"> <svg class="form-icons-cross">
+          <use  href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-cross_form"> 
+        
+      </button>
+        <h3 class="form-header">Оставьте свои данные,мы вам перезвоним</h3>
+        <div class="form-field">
+          <input
+          type="text"
+          class="form-input"
+          name="name"
+          id="name"
+          placeholder="Микола Ігорович"
+          />
+          <svg class="form-icons ">
+          <use  href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-person_form"> >
+        </svg>
+          <label for="name" class="form-label">Имя</label>
         </div>
-      </div>
+        <div class="form-field">
+          <input 
+          type="tel"
+          class="form-input"
+          name="name"
+          id="tel"
+          placeholder="+380958966325"
+          >
+          <svg class="form-icons ">
+          <use  href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-telephone_form"> >
+        </svg>
+          <label for="tel" class="form-label">Телефон</label>
+        </div>
+        <div class="form-field">
+          <input 
+          type="text"
+          class="form-input"
+          name="name"
+          id="mail"
+          placeholder="UFC@dana_white.com">
+           <svg class="form-icons ">
+          <use  href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-mail_form"> >
+        </svg>
+        
+          <label for="mail" class="form-label">Почта</label>
+        </div>
+        <div class="form-field">
+<textarea class="form-input comment" name="comment" id="comment" cols="30" rows="10" placeholder="ислам махачев новый чемпион"></textarea>
+<label for="comment" class="form-label">Комментарий</label>
+        </div>
+        <div class="form-field">
+          <input type="checkbox" name="" value="" id="agree"
+    >
+    <label for="agree">Соглашаюсь с рассылкой и принимаю 
+      <a class="agree-link" href="">Условия договора</a>
+    </label>
+        </div>
+        <button class="button-send" type="submit" data-modal-close>Отправить</button>
+      </form>
     </section>
     <section class="benefits">
       <ul class="benefits-list">
@@ -335,6 +384,82 @@
           <a class="e-mail" href="info@example.com"> info@example.com </a>
           <a class="number" href="tel:+380961111111">+38 099 111 11 11</a>
         </ul>
+      </div>
+      <div class="join-us">
+        <h3  class="title">Присоединяйтесь</h3>
+         <div class="social-links">
+            <button class="social-item item-footer">
+              <a href="">
+                <svg class="social-icon icon-footer">
+                <use
+                  href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-instagram"
+                ></use>
+              </svg>
+              </a>
+            </button>
+            <button class="social-item item-footer">
+              <a href="">
+                <svg class="social-icon icon-footer">
+                <use
+                  class="use-icon"
+                  href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-twitter"
+                ></use>
+              </svg>
+              </a>
+            </button>
+            <button class="social-item item-footer">
+              <a href="">
+                <svg class="social-icon icon-footer">
+                <use
+                  href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-facebook"
+                ></use>
+              </svg>
+              </a>
+            </button>
+            <button class="social-item item-footer">
+              <a href="">
+                <svg class="social-icon icon-footer">
+                <use
+                  href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-linkedin"
+                ></use>
+              </svg>
+              </a>
+            </button>
+          </div>
+      </div>
+      
+      
+      <div class="distribution-container">
+        <h3 class="title">Подпишитесь на рассылку</h3>
+        <div class="distribution">
+        <!-- <div class="proba">
+            <input type="text" 
+          class="distribution-input"
+          name="name"
+          id="distribution-input"
+          placeholder="E-mail">
+           
+        </div>
+          <div class="proba">
+            <label for="distribution-input" class="distribution-label">Подписаться
+            <svg class="distribution-icon">
+              <use href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-icon-send"></use>
+            </svg>
+          </label>
+          </div> -->
+          <input type="text"
+          class="distribution-input"
+          name="name"
+          id="distribution-input"
+          placeholder="E-mail"
+          >
+          <button class="distribution-button" type="submit">
+          Подписаться
+           <svg class="distribution-icon">
+              <use href="./images/icons.svg/svg-sprite/symbol-defs.svg/symbol-defs.svg#icon-icon-send"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </footer>
     <script src="./js/modal.js"></script>
